@@ -4,6 +4,3 @@ WORKDIR /code/convert
 ADD convert-supplier.sh ./convert-supplier.sh
 
 RUN ./convert-supplier.sh
-
-ENTRYPOINT ["tail"]
-CMD ["-f","/dev/null"]
