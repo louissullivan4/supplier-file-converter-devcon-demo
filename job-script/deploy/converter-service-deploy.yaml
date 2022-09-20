@@ -20,6 +20,6 @@ spec:
     spec:
       containers:
       - name: converter-service
-        image: sullivl/converter-service:0.0.2
+        image: sullivl/converter-service:0.0.3
         ports:
         - containerPort: 8090
