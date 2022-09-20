@@ -2,6 +2,7 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: ConverterService
+  namespace: default
   labels:
     app: ConverterService
     app.kubernetes.io/name: converter-service
