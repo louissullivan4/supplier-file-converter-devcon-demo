@@ -1,10 +1,10 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: ConverterService
+  name: converter-service
   namespace: default
   labels:
-    app: ConverterService
+    app: converter-service
     app.kubernetes.io/name: converter-service
 spec:
   replicas: 1
