@@ -1,5 +1,5 @@
 apiVersion: apps/v1
-kind: Deployment
+kind: Job
 metadata:
   name: converter-service
   namespace: default
@@ -7,16 +7,7 @@ metadata:
     app: converter-service
     app.kubernetes.io/name: converter-service
 spec:
-  replicas: 1
-  selector:
-    matchLabels:
-      app: converter-service
-      app.kubernetes.io/name: converter-service
   template:
-    metadata:
-      labels:
-        app: converter-service
-        app.kubernetes.io/name: converter-service
     spec:
       containers:
       - name: converter-service
