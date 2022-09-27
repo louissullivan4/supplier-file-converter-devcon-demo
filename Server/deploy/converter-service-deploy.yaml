@@ -1,0 +1,24 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: converter-service-app
+  labels:
+    app: ConverterServiceApp
+    app.kubernetes.io/name: converter-service-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: converter-service-app
+      app.kubernetes.io/name: converter-service-app
+  template:
+    metadata:
+      labels:
+        app: converter-service-app
+        app.kubernetes.io/name: converter-service-app
+    spec:
+      containers:
+      - name: converter-service-app
+        image: mjjos1/converter-service:0.9.0
+        ports:
+        - containerPort: 5000
